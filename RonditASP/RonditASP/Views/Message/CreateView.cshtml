@@ -1,0 +1,40 @@
+﻿@model MessageCreateViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Send message</h1>
+<form method="post" asp-controller="Message" asp-action="Create">
+    <table style="width:100%">
+        <tr>
+            <th>Send to</th>
+        </tr>
+        <tr>
+            <td>
+                @if (Model.receiver == "")
+	            {
+                    <input style="width:100%" asp-for="receiver" name="receiver" id="receiver" value="@Model.receiver" type="text" />
+                }
+                else
+                {
+                    <input style="width:100%" asp-for="receiver" name="receiver" id="receiver" placeholder="To whomst do thy want to send a message?" type="text" />
+                }          
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Message
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input style="width:100%" asp-for="description" name="description" id="description" placeholder="What do you want to say?"  type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="margin-left:0px" type="submit" />
+            </td>
+        </tr>
+    </table>
+</form>

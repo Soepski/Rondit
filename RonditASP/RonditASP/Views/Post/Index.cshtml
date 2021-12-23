@@ -1,0 +1,34 @@
+﻿@model PostCreateViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Create post</h1>
+<form method="post" asp-controller="Post" asp-action="Create">
+    <table style="width:100%">
+        <tr>
+            <th>Post Title</th>
+        </tr>
+        <tr>
+            <td>
+                <input style="width:100%" asp-for="PostTitle" id="posttitle" placeholder="Describe your post" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Post description
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input style="width:100%" asp-for="PostDescription" placeholder="What do you want to say?" id="postdescription" type="text" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="margin-left:0px" type="submit" />
+            </td>
+        </tr>
+    </table>
+</form>
+

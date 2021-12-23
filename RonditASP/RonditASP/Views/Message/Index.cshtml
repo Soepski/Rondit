@@ -1,0 +1,46 @@
+﻿@model UserMessagesViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="CreateView">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ontvangen door
+                @*@Html.DisplayNameFor(model => model.messages[0].Zender)*@
+            </th>
+            <th style="width:60%">
+                @Html.DisplayNameFor(model => model.messages[0].Bericht)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.messages[0].Datum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.messages) {
+        <tr>
+            <td>
+                @Html.ActionLink(item.Zender.Username, "Index", "Account", new { username = item.Zender.Username }, null)
+                @*@Html.DisplayFor(modelItem => item.Zender.Username)*@
+            </td>
+            <td style="width:60%">
+                @Html.DisplayFor(modelItem => item.Bericht)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Datum)
+            </td>
+            <td>
+                @Html.ActionLink("Reply", "CreateView", new { username = item.Zender.Username }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

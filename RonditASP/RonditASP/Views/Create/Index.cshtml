@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Create post</h1>
+<form method="POST">
+    <table>
+        <tr>
+            <th>Post Title</th>
+        </tr>
+        <tr>
+            <td>
+                <input name="posttitle" id="posttitle" placeholder="Describe your post" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                Post description
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <input name="postdescription" placeholder="What do you want to say?" id="postdescription" type="text"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input style="margin-left:0px" asp-controller="Create" asp-action="Create" type="submit"/>
+            </td>            
+        </tr>
+    </table>
+</form>
+

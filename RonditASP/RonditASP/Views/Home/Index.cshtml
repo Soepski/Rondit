@@ -1,0 +1,69 @@
+﻿@model UserPostsViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" style="margin:10px">
+    <a asp-controller="Post" asp-action="Index">Create post!</a>
+</div>
+<div>
+
+    @foreach (Post p in Model.posts)
+    {
+    <div class="postdiv">
+        <div style="padding: 5px">
+            @Html.ActionLink(p.Title, "ShowPost", "Post", new { id = p.PostID } )
+        </div>
+        <div style="padding: 5px; border: 1px solid LightGray">
+            @p.Description
+        </div>
+        <div style="padding: 5px;">
+            Posted by: @p.User.Username
+        </div>
+        <div style="height: 30px;">
+            <table style="width: 100%; margin-top: 5px; margin-bottom: 5px">
+                <tr>
+                    <td>
+                        
+                        @if (p.Vote == 1)
+                        {
+                            <a style="display:block" href='@Url.Action("UpvotePost", "Post", new { postid = p.PostID})'>
+                                <img src="~/css/images/grayarrowuporange.png" style="display:block; height: 30px; width: auto; margin: auto" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a style="display:block" href='@Url.Action("UpvotePost", "Post", new { postid = p.PostID})'>
+                                <img  src="~/css/images/grayarrowup.png" style="display:block; height: 30px; width: auto; margin: auto" />
+                            </a>
+                        }
+
+
+                    </td>
+                    <td>
+                    <td>
+                        <span id="points">@p.Points</span>
+                    </td>
+                    <td>
+                        @if (p.Vote == -1)
+                        {
+                            <a style="display:block" href='@Url.Action("DownvotePost", "Post", new { postid = p.PostID})'>
+                                <img src="~/css/images/grayarrowdownblue.png" style="display: block; height: 30px; width: auto; margin: auto" />
+                            </a>
+                        }
+                        else
+                        {
+                            <a style="display:block" href='@Url.Action("DownvotePost", "Post", new { postid = p.PostID})'>
+                                <img src="~/css/images/grayarrowdown.png" style="display: block; height: 30px; width: auto; margin: auto" />
+                            </a>
+                        }
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    }
+
+    <p class="text-center">Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

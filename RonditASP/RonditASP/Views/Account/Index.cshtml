@@ -1,0 +1,64 @@
+﻿@model UserProfileViewModel
+@{
+    ViewData["Title"] = "Index";
+
+}
+<div class="container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">  
+                <h4>@Model.user.Username</h4>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                    <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive" style="width:50%; height:50%">
+
+                    <div>
+                        @if (Model.user.Role == "user")
+                        {
+                            <p>a   <b> user</b></p>
+                        }
+                        else
+                        {
+                            <p>an   <b> admin</b></p>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                    <div class="container">
+                        @if (Model.follow == true && Model.logged == false)
+                        {
+                            <button class="btn btn-danger" type="button" onclick="location.href='@Url.Action("Unfollow", "Account", new { id = @Model.user.ID } )'">
+                                Unfollow
+                            </button>
+                        }
+                        else if (Model.follow == false && Model.logged == false)
+                        {
+                            <button class="btn btn-primary" type="button" onclick="location.href='@Url.Action("Follow", "Account", new { id = @Model.user.ID } )'">
+                                Follow
+                            </button>
+                        }
+                        else
+                        {
+
+                        }
+
+                        <button class="btn btn-success" type="button" onclick="location.href='@Url.Action("CreateView", "Message", new { username = Model.user.Username } )'">
+                            Send message
+                        </button>
+
+
+
+                    </div>
+                    <hr>
+                    <ul class="container details">
+                        <li><p><span class="glyphicon glyphicon-user one" style="width:50px;"></span>@Model.user.Username</p></li>
+                        <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>@Model.user.Email</p></li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+

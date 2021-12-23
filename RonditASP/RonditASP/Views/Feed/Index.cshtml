@@ -1,0 +1,55 @@
+﻿@model IEnumerable<RonditASP.Models.Activity>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Friend feed</h1>
+
+@if (Model == null)
+{
+    <h3>Je hebt nog geen feed. Volg mensen om een feed te krijgen</h3>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Gebruiker
+                    @*@Html.DisplayNameFor(model => model.activityid)*@
+                </th>
+                <th>
+                    Activiteit
+                    @*@Html.DisplayNameFor(model => model.message)*@
+                </th>
+                <th>
+                    Datum
+                    @*@Html.DisplayNameFor(model => model.date)*@
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.user.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.message)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>*@
+                </tr>
+            }
+        </tbody>
+    </table>
+}

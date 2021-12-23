@@ -1,0 +1,85 @@
+﻿@model UserPostCommentsViewModel
+@{
+    ViewData["Title"] = "ShowPost";
+}
+
+<div class="postdiv">
+    <div style="padding: 5px">
+        @Model.post.Title
+    </div>
+    <div style="padding: 5px; border: 1px solid LightGray">
+        @Model.post.Description
+    </div>
+    <div style="padding: 5px;">
+        Posted by: @Model.post.User.Username
+    </div>
+    <div style="height: 30px;">
+        <table style="width: 100%; margin-top: 5px; margin-bottom: 5px">
+            <tr>
+                <td>
+                    <img src="~/css/images/grayarrowup.png" style="display: block; height: 30px; width: auto; margin: auto" />
+                </td>
+                <td>
+                <td>
+                    @Model.post.Points
+                </td>
+                <td>
+                    <img src="~/css/images/grayarrowdown.png" style="display: block; height: 30px; width: auto; margin: auto" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    @if (Model.user.Role == "admin")
+    {
+        @Html.ActionLink("Delete", "DeletePost", "Post", new { id = Model.post.PostID})
+    }
+</div>
+
+<div class="text-center">
+    <a asp-controller="Home" asp-action="Index">Back to feed</a>
+</div>
+
+<div class="commentpostdiv">
+    <form method="post" asp-controller="Comment" asp-action="Create">
+        <table style="width:100%">
+            <tr>
+                <th>What's your responsive?</th>
+            </tr>
+            <tr>
+                <td>
+                    <input style="width:100%; background-color:lightgray; margin-left:0px" name="comment" placeholder="Tell them your opinion" type="text" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="hidden" name="postid" value="@Model.post.PostID" />
+                    <input style="margin-left:0px; width:100%" type="submit" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<div class="commentdiv">
+    @if (Model.comments == null)
+    {
+
+    }
+    else
+    {
+        <h3>Comments</h3>
+    }
+
+    @foreach (Comment comment in @Model.comments)
+    {
+        <div class="comment">
+            <div style="padding: 5px;">
+                @comment.Inhoud
+            </div>
+            <div style="padding: 5px;">
+                Posted by: @comment.user.Username
+            </div>
+        </div>
+    }
+</div>
+

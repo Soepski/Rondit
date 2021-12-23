@@ -1,0 +1,16 @@
+﻿@model bool
+@{
+    ViewData["Title"] = "Create";
+}
+
+@if (true)
+{
+    <h1>Je bericht is verzonden</h1>
+    @Html.ActionLink("Terug naar berichten", "Index", "Message");
+}
+else
+{
+    <h1>Er is iets mis gegaan met verzenden, weet je zeker dat de gebruikersnaam goed is?</h1>
+    @Html.ActionLink("Ga terug", "CreateView", "Message");
+}
+

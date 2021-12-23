@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Data_layer.DALs.ActivityDAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAABAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DALs\ActivityDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_layer.DALs.CommentDAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAhAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>DALs\CommentDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_layer.DALs.MessageDAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAgAACAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>DALs\MessageDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_layer.DALs.PostDAL" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAAAAAAIAgAAAIAAIAAAIAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>DALs\PostDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_layer.DALs.UserDAL" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQAAAAgAAABAAAAAAAAAABAAEAAAAAEEAAE=</HashCode>
+      <FileName>DALs\UserDAL.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Data_layer.DTOs.ActivityDTO" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAASA=</HashCode>
+      <FileName>DTOs\ActivityDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.DTOs.CommentDTO" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAEAAAAAAAAAAAACAAAgAAAAAAAAAQA=</HashCode>
+      <FileName>DTOs\CommentDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.DTOs.MessageDTO" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAgAACAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>DTOs\MessageDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.DTOs.PostDTO" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggEEAAAAAAAgAAAAAAAABAAAAAAABAAA=</HashCode>
+      <FileName>DTOs\PostDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.DTOs.PostUpvoteDTO" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>DTOs\PostUpvoteDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.DTOs.UserDTO">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAEQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>DTOs\UserDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.Program" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Data_layer.Properties.Settings" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Data_layer.Interfaces.IActivity">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IActivity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Data_layer.Interfaces.IComment">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Interfaces\IComment.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Data_layer.Interfaces.IMessage">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Interfaces\IMessage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Data_layer.Interfaces.IPost">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAAAAAAAAAAAAAIAAIAAAIAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IPost.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Data_layer.Interfaces.IUser">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAQAAAAAAAABAAAAAAAAAABAAEAAAAAEEAAE=</HashCode>
+      <FileName>Interfaces\IUser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

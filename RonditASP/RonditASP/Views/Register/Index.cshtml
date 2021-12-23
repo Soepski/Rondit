@@ -1,0 +1,41 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Rondit</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="wrapper fadeInDown" style="margin-top:150px">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <!-- Icon -->
+            <img src="~/css/images/ronditmethoofd.png" style="height:45%; width:45%; padding: 20px" />
+
+            <!-- Login Form -->
+            <form method="post">
+                <input type="text" id="login" class="fadeIn second" asp-for="username" placeholder="Username">
+                <input type="text" id="email" class="fadeIn second" asp-for="email" placeholder="E-mail">
+                <input type="password" id="password" class="fadeIn third" asp-for="password" placeholder="Password">
+                <input type="password" id="passwordrepeat" class="fadeIn third" asp-for="passwordrepeat" placeholder="Repeat password">
+                <input style="margin-top:30px" type="submit" class="fadeIn fourth" value="Register" asp-controller="Register" asp-action="Register">
+            </form>
+
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - Rondit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>
+
